@@ -30,7 +30,9 @@ mongoose.connect(process.env.DB_CONNECTION,{ useNewUrlParser: true },(err)=>{
 app.use(bodyParser.json());
 //(Import routes)
 const postsRoute=require('./routes/posts');
+const themeRoute=require('./routes/themes');
 app.use('/posts',postsRoute)
+app.use('/themes',themeRoute)
 
 //ROUTES
 app.get('/',(req,res)=>{

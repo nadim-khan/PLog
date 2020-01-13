@@ -1,14 +1,20 @@
 const express=require('express');
 
 const router=express.Router();
-const Post=require('../models/Post')
+const Post=require('../models/Post');
 
+var currentdate = new Date();
+var date = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth() 
++ "/" + currentdate.getFullYear() + " @ " 
++ currentdate.getHours() + ":" 
++ currentdate.getMinutes() + ":" + currentdate.getSeconds();
+    
 //Gets all the POSTS
 router.get('/',async(req,res)=>{
     try{
         const posts= await Post.find();
         res.json(posts)
-        console.log('\n ==> Request for All the posts : ',posts)
+        console.log('\n['+date+'] - Request for All the posts : ',posts)
     }catch(err){
         res.json({message:err});
     }
@@ -18,7 +24,7 @@ router.get('/:postId',async(req,res)=>{
     try{
         const postsById= await Post.findById(req.params.postId);
         res.json(postsById);
-        console.log('\n ==> Reques for Post with ID [ '+req.params.postId+' ] Required Post : ',postsById)
+        console.log('\n['+date+'] - Reques for Post with ID [ '+req.params.postId+' ] Required Post : ',postsById)
     }catch(err){
         res.json({message:err});
     }
@@ -34,7 +40,7 @@ router.post('/',async(req,res)=>{
     try{
         const savedPost= await post.save();
         res.json(savedPost)
-        console.log('\n ==> Post saved : ',savedPost)
+        console.log('\n['+date+'] - Post saved : ',savedPost)
     }catch(err){
         res.json({message:err});
     }
@@ -49,10 +55,10 @@ router.patch('/:postId',async(req,res)=>{
             {$set: {title:req.body.title}}
         );
         res.json(updatePost)
-        console.log('\n ==> Post Updated : ',updatePost)
+        console.log('\n['+date+'] - Post Updated : ',updatePost)
     }catch(err){
         res.json({message:err})
-        console.log('\n ==> Post Updated err: ',err)
+        console.log('\n['+date+'] - Post Updated err: ',err)
     }   
 })
 
