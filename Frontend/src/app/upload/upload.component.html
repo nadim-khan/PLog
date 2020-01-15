@@ -1,0 +1,16 @@
+<div class="uploadTopView">
+    <div>
+        <mat-file-upload
+            [labelText]="'Select a file (or multiple) to upload:'"
+            [selectButtonText]="'Choose File(s)'"
+            [uploadButtonText]="'Submit'"
+            [allowMultipleFiles]="true"
+            [showUploadButton]="true"
+            [customSvgIcon]="'close_custom'"
+            [acceptedTypes]="'.png, .jpg, .jpeg'"
+            (uploadClicked)="onUploadClicked($event)"
+            (selectedFilesChanged)="onSelectedFilesChanged($event)"
+            >
+        </mat-file-upload>
+    </div>
+</div>

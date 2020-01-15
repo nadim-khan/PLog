@@ -1,3 +1,7 @@
+# 'npm start'
+Run the Frontend as well as backend start scripts concurrently
+check the package.json , script for starting of application
+
 # RESTful_Node
 Rest API - Node.js
 Rest API using plain node.js. NO DEPENDENCIES.

@@ -1,0 +1,9 @@
+.topAppContainer{
+    height:100vh;
+    /* background-image:url('/assets/images/bg.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Needed to position the navbar */
+    position: relative;
+}

@@ -1,0 +1,40 @@
+.navbar{
+    justify-content: space-between;
+    background-color:rgba(0,0,0,64);
+    opacity: 0.9;
+}
+span{
+    padding-right: 1rem;
+   
+}
+.logo{
+    color:red;
+    margin-left:200px;
+    font-size: 40px;
+    letter-spacing: -2px;
+    word-spacing: 1px;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+mat-sidenav-container{
+    height:89.6%;
+}
+mat-sidenav,mat-sidenav-content{
+    padding:0 16px 0 16px;
+}
+mat-sidenav{
+    background-color:rgba(0,0,0,64);
+    opacity: 0.9;
+    width:200px;
+}
+.mat-icon{
+    cursor:pointer;
+}
+.mat-icon:hover{
+    color:rgba(14, 14, 230, 0.788);
+    transform: scale(1.2);
+    transition: ease-out;
+}

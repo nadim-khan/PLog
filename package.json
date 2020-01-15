@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "startBackend": "nodemon app.js",
     "startFrontend": "cd Frontend && npm start",
-    "dev": "concurrently  \"npm run startFrontend\" \"npm run startBackend\""
+    "appStart": "concurrently  \"npm run startFrontend\" \"npm run startBackend\"",
+    "start":"npm run appStart"
   },
   "author": "Nadeem Khan",
   "license": "ISC",
